@@ -1,52 +1,35 @@
 class Duck():
-   def __init__(self):
+    def __init__(self):
        self.name ="tree"
        self.title="water"
-       self.book={"Green Book"}
+       self._book={"duck"}
        self.price="30"
+       self.author="jason"
 
-   def Add(self):
-    self.title = input("What book do you want to see")
-    print("You have added",self.title)
+    def Add(self):
+        self.title = input("What book do you want to see")
+        print("You have added",self.title)
     
-    self.title=input("enter the name of the book you would like to add: \n").upper
-    self.author=input("enter the author of the book you would like to added:\n").upper
-    self.price=float(input("enter the listing price of the book:\n"))
-    self.book[self.title] ={self.name:'tree','self.book':'Green book'}
-    self.book[self._name]={'author':self._author,'price':self._price}
+        self.title=input("enter the name of the book you would like to add: \n").upper
+        self.author=input("enter the author of the book you would like to added:\n").upper
+        self.price=float(input("enter the listing price of the book:\n"))
+       
+        self.book[self._name]={'author':self._author,'price':self._price}
     
 
-def sell(self):
-      self.name=("enter the name of the book you would like to add: \n")
-      try:
-
-       str(self.name)
-       if self. name in self.book:
-        self.book.pop(self.name)
-        print("the reaining books are:,self.book")
-except:
-print("Please enter a bok title")
-
-
-def showbook(self):
- 
+    def sell(self):
+        self.name=input("enter the name of the book you  want to sell")
+        try:
+            str(self.name)
+            if self. name in self.book:
+               self.book.pop(self.name)
+               print("the reaining books are:",self.book)
+        except:
+            print("please enter the book title")
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
- for x in self.book:
-    self.book= print("self book" )
-    self.book= print[x]
-    self.book= print["authuor price"] 
+    def show(self):
+        for x in self.book:
+           print("self book" )
+           print[x]
+           print["authuor price"] 
