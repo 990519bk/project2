@@ -1,9 +1,9 @@
 class Duck():
     def __init__(self):
-       self.name ="tree"
-       self.title="water"
+       self.name =""
+       self.title=""
        self._book={"duck"}
-       self.price="30"
+       self.price=8
        self.author="jason"
 
     def Add(self):
@@ -30,6 +30,7 @@ class Duck():
 
     def show(self):
         for x in self.book:
-           print("self book" )
            print[x]
-           print["authuor price"] 
+           print(self. book )[x]("self book" )
+           print(self. book )[x]
+           print(self. book )[x]["authuor price"] 
