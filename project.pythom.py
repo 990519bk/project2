@@ -15,7 +15,7 @@ while True:
     else:
       print("Not found:",title) 
   elif v =="no":
-   print("bye.")
+   print("bye.") 
    break
   else:
     print("type:yes/find/no")        
