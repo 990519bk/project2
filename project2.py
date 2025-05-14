@@ -1,4 +1,4 @@
-class Duck():
+class book():
     def __init__(self):
        self.name =""
        self.title=""
@@ -34,3 +34,7 @@ class Duck():
            print(self. book )[x]("self book" )
            print(self. book )[x]
            print(self. book )[x]["authuor price"] 
+   
+    def find(self):
+        self.title = input("What book do you want to find")
+   elif

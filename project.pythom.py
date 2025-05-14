@@ -14,6 +14,10 @@ while True:
       print(f"\nFound'{title}':\n Author:{info['Author']}\n Price:{info['price']}")     
     else:
       print("Not found:",title) 
+  elif v == "show":
+    b.showbook
+  elif v == "sell":
+    b.sell 
   elif v =="no":
    print("bye.") 
    break
