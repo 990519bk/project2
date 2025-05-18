@@ -1,21 +1,19 @@
 class book():
     def __init__(self):
-       self.name =""
-       self.title=""
-       self._book={"duck"}
-       self.price=8
-       self.author=""
+       self.name = ""
+       self.title= ""
+       self._book = {}
+       self.price = 8
+       self.author = "Jason"
 
     def Add(self):
-        self.title = input("What book do you want to see")
-        print("You have added",self.title)
-    
+       
         self.title=input("enter the name of the book you would like to add: \n").upper
         self.author=input("enter the author of the book you would like to added:\n").upper
         self.price=float(input("enter the listing price of the book:\n"))
        
         self._book[self.name]={'author':self.author,'price':self.price}
-    
+        print("You have added",self.title)
 
     def sell(self):
         self.name=input("enter the name of the book you  want to sell")
@@ -29,11 +27,11 @@ class book():
 
 
     def show(self):
-        for x in self._book:
-           print[x]
-           print(self. _book )[x]("self book" )
-           print(self. _book )[x]
-           print(self. _book )[x]["authuor price"] 
+        for title  in self._book:
+           print("title:",title)
+           print("author:",self._book[title]["author"])
+           print("price:",self._book[title]["price"])
+           print("-")
    
     def find(self):
         self.title = input("What book do you want to find")
@@ -43,7 +41,10 @@ class book():
             print("price:",self._book[self.title]["price"])
         else:
             print("Sorry the book is not in the collection.")
+
     def save(self):
         with open("books.txt","w") as f:
             for title in self._book:
+                f.write(f"{title}\n")
+        print("Book already save")
                 

@@ -4,9 +4,10 @@ b=book()
 
 while True:
   print(b.name)
-  v = input("Would you want to add a book ?(yes/find/no):").strip().lower()
+  v = input("Would you want to add a book ?(yes/find/no/show/save):").strip().lower()
   if v == "yes":
-    b.Add
+    b.Add()
+
   elif v == "find":
     title = input("book title:").strip().upper()
     info = b._book.get(title)       
@@ -14,15 +15,22 @@ while True:
       print(f"\nFound'{title}':\n Author:{info['Author']}\n Price:{info['price']}")     
     else:
       print("Not found:",title) 
+
   elif v == "show":
-    b.show
+    b.show()
+
+  elif v == "save":
+    b.save()
+
   elif v == "sell":
-    b.sell 
+    b.sell()
+
   elif v =="no":
-   print("bye.") 
-   break
+    print("bye.") 
+    break
+
   else:
-    print("type:yes/find/no")        
+    print("type:yes/find/no/show/save \n")        
   
 
 
