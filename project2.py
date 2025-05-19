@@ -1,10 +1,14 @@
 class book():
-    def __init__(self):
-       self.name = ""
-       self.title= ""
-       self._book = {}
-       self.price = 8
-       self.author = "Jason"
+    def __init__(self, storage_path="books.txt"):
+        self.storage_path = storage_path
+
+        self._books = []
+        self.name = ""
+        self.title= ""
+        self._book = {}
+        self.price = 8
+        self.author = "Jason"
+ 
 
     def Add(self):
        
@@ -32,6 +36,20 @@ class book():
            print(self._book[x]('price'))
            print(self._book[x]("self_book"))
            print(self._book[x]("author"))
+
+
+    def save(self):
+     
+        try:
+            with open(self.storage_path, "w", encoding="utf-8") as f:
+                for t, a, p in self._books:
+                    f.write(f"{t}|{a}|{p}\n")
+            print(f"Saved to {self.storage_path}")
+        except Exception as e:
+            print("Failed to save:", e)
+
+   
+       
    
     def find(self):
         self.title = input("What book do you want to find")
@@ -42,9 +60,4 @@ class book():
         else:
             print("Sorry the book is not in the collection.")
 
-    def save(self):
-        with open("books.txt","w") as f:
-            for title in self._book:
-                f.write(f"{title}\n")
-        print("Book already save") 
-                
+    
