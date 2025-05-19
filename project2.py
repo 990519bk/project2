@@ -8,12 +8,12 @@ class book():
 
     def Add(self):
        
-        self.title=input("enter the name of the book you would like to add: \n").upper
-        self.author=input("enter the author of the book you would like to added:\n").upper
+        self.title=input("enter the name of the book you would like to add: \n")
+        self.author=input("enter the author of the book you would like to added:\n")
         self.price=float(input("enter the listing price of the book:\n"))
        
-        self._book[self.name]={'author':self.author,'price':self.price}
-        print("You have added",self.title)
+        self._book[self.title]={'author':self.author,'price':self.price}
+        print("You have added",self._book)
 
     def sell(self):
         self.name=input("enter the name of the book you  want to sell")
@@ -27,11 +27,11 @@ class book():
 
 
     def show(self):
-        for title  in self._book:
-           print("title:",title)
-           print("author:",self._book[title]["author"])
-           print("price:",self._book[title]["price"])
-           print("-")
+        for x   in self._book:
+           print (x)
+           print(self._book[x]('price'))
+           print(self._book[x]("self_book"))
+           print(self._book[x]("author"))
    
     def find(self):
         self.title = input("What book do you want to find")
